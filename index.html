@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive 3D Parallax Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <header>
+  </header>
+  <main>
+    <div class="container">
+
+
+      <img class="layer" src="/img/background.png" alt="image description">
+
+    
+  </div>
+  </main>
+
+
+  <script src="js/gsap.min.js"></script>
+  <script src="main.js" defer></script>
+
+  <script>
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  let container = document.querySelector('.container');
+  let layers = document.querySelectorAll('.layer');
+
+  container.addEventListener('mousemove', (e) => {
+    let X = e.pageX;
+    let Y = e.pageY;
+
+    layers[0].style.transform = `translate(${X / 200*1}px, ${Y / 80 *-1}px)`;
+   
+  });
+});
+
+
+
+
+
+
+
+</script>
+  </script>
+   <!--  link tailwind  -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- link flowbite -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://kit.fontawesome.com/2e41153088.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
